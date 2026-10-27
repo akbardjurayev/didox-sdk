@@ -1,0 +1,38 @@
+{
+  "name": "didox/sdk",
+  "description": "Standalone PHP SDK for the documented Didox partner API.",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": ">=8.2",
+    "ext-curl": "*",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^11.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Didox\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Didox\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "phpunit tests",
+    "lint": "find src tests -type f -name '*.php' -print0 | xargs -0 -n1 php -l"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Didox\\Laravel\\DidoxServiceProvider"
+      ],
+      "aliases": {
+        "Didox": "Didox\\Laravel\\DidoxFacade"
+      }
+    }
+  }
+}

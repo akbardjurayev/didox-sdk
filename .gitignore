@@ -1,0 +1,26 @@
+/vendor/
+/.phpunit.cache/
+/.phpunit.result.cache
+
+# Environment and local secrets
+.env
+.env.*
+
+# IDE and editor files
+.idea/
+.vscode/
+*.iml
+*.suo
+*.user
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Test, analysis, coverage, and local cache files
+/.php-cs-fixer.cache
+/.phpstan.cache/
+/coverage/
+/.cache/
+*.log
